@@ -1,0 +1,42 @@
+/**
+ * http://kazzkiq.github.io/balloon.css/
+ * https://github.com/kazzkiq/balloon.css
+ */
+@import "../../node_modules/balloon-css/src/balloon";
+
+.tooltip-danger {
+    --balloon-color: #E26E61;
+
+    &[aria-label][data-balloon-pos][data-balloon-pos=up-left] {
+        &:before {
+            // left: 40px;
+            left: -4px;
+            bottom: calc(100% - 10px);
+
+            border: 10px solid transparent;
+            border-top: 10px solid var(--balloon-color);
+        }
+
+        &:after {
+            left: -44px;
+            padding: 10px;
+
+            font-size: 14px;
+            line-height: 16px;
+            letter-spacing: 0.02em;
+
+            color: #FFFFFF;
+            box-shadow: 0px 4px 4px rgba(184, 104, 95, 0.15);
+            border-radius: 6px;
+        }
+
+        &[data-balloon-hide] {
+            &:before,
+            &:after {
+                // content: none;
+                opacity: 0 !important;
+                transform: translate(0,var(--balloon-move)) !important;
+            }
+        }
+    }
+}

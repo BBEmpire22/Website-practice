@@ -1,0 +1,26 @@
+.to-top {
+  display: block;
+  width: 76px;
+  height: 76px;
+  background: #35b972;
+  border-radius: 15px;
+  transform: rotate(45deg);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 75px;
+  bottom: -37px;
+  &:after {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 26px;
+    background-image: url("../img/icons/to-top.svg");
+    background-repeat: no-repeat;
+    transform: rotate(-45deg);
+  }
+  @media screen and (max-width: 767.98px) {
+    display: none;
+  }
+}

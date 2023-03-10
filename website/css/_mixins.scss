@@ -1,0 +1,63 @@
+/*
+  Typography
+**/
+
+@mixin font-monotype {
+    font-family: $default-font-family-mono;
+}
+
+@mixin font-xlarge {
+    font-size: $default-font-size + 10;
+    line-height: $default-line-height + 12;
+}
+
+@mixin font-large {
+    font-size: $default-font-size + 6;
+    line-height: $default-line-height + 6;
+}
+
+@mixin font-medium {
+    font-size: $default-font-size + 2;
+    line-height: $default-line-height + 2;
+}
+
+@mixin font-default {
+    font-size: $default-font-size;
+    line-height: $default-line-height;
+}
+
+@mixin font-small {
+    font-size: $default-font-size - 2;
+    line-height: $default-line-height - 2;
+}
+
+@mixin font-xsmall {
+    font-size: $default-font-size - 4;
+    line-height: $default-line-height - 6;
+}
+
+@mixin heading-1 {
+    @include font-xlarge();
+    font-weight: 700;
+}
+
+@mixin heading-2 {
+    @include font-large();
+    font-weight: 700;
+}
+
+@mixin heading-3 {
+    @include font-medium();
+    font-weight: 700;
+}
+
+@mixin heading-4 {
+    @include font-default();
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+@mixin for-phone-horizontal {
+  @media (max-width: $media-breakpoint-width-xs-max) and (max-height: $media-breakpoint-height-xs-max) and (orientation: landscape) { @content; }
+}

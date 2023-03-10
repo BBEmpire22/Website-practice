@@ -1,0 +1,50 @@
+.cookie-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    background-color: rgba(59, 66, 84, 0.94);
+
+    .container {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .row {
+        align-items: center;
+    }
+
+    &__text {
+        margin: 0;
+
+        color: #A6AEC7;
+
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    &__button {
+        padding: 18px 28px;
+
+        color: #FFFFFF;
+        background-color: #555E76;
+        border: 1px solid #3B4254;
+        // box-sizing: border-box;
+
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.05em;
+        font-variant: all-small-caps;
+
+        cursor: pointer;
+        transition: background-color .2s ease;
+
+        &:hover {
+            background-color: darken(#555E76, 3%);
+        }
+    }
+}

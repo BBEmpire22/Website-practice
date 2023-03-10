@@ -1,0 +1,42 @@
+$block: '.error-page';
+
+#{$block} {
+  max-width: 609px;
+  width: 100%;
+  margin: 150px auto 187px;
+
+  @media (max-width: 610px) {
+    max-width: 100%;
+    padding: 0 20px;
+    margin: 16px 0 40px;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 64px;
+    text-align: center;
+  }
+
+  &__subtitle {
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+  }
+
+  &__img img {
+    max-width: 320px;
+    width: 100%;
+    height: 286px;
+    display: block;
+    margin: 24px auto;
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: $white;
+  }
+}

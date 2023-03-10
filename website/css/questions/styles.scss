@@ -1,0 +1,147 @@
+$block: '.questions';
+
+#{$block} {
+  max-width: 1144px;
+  width: 100%;
+  margin: 55px auto 110px;
+
+  @media (max-width: 1224px) {
+    max-width: 870px;
+    padding: 0 16px;
+  }
+
+  @media (max-width: 520px) {
+    margin: 45px auto 50px;
+  }
+
+  &-title {
+    margin-bottom: 29px;
+  }
+
+  &-tabs {
+    display: grid;
+    grid-template-columns: repeat(3, max(184px));
+    grid-column-gap: 24px;
+    
+    @media (max-width: 425px) {
+      overflow: auto;
+    }
+  }
+
+  &-tab {
+    max-width: 184px;
+    width: 100%;
+    color: rgba(255,255,255, 0.8);
+    font-size: 12px;
+    padding: 29px 18px;
+    background: #353A4D;
+    border-radius: 8px;
+    border: 0;
+
+    &:hover:not(.button) {
+      border: 0;
+      color: rgba(255,255,255, 0.8);
+    }
+
+    &.active {
+      background: #2F80ED;
+    }
+
+    &__title {
+      margin-bottom: 10px;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &-subtitle {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-column-gap: 16px;
+    align-items: center;
+    margin-bottom: 24px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+
+    svg {
+      display: block;
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__container {
+    margin-top: 48px;
+
+    @media (max-width: $media-breakpoint-sm) {
+      padding: 0 16px;
+    }
+  }
+
+  &__accordion {
+    &-label {
+      display: flex;
+      justify-content: space-between;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 20px;
+      color: rgba(255,255,255, 0.8);
+      user-select: none;
+      cursor: pointer;
+
+      svg {
+        width: 16px;
+        height: 16px;
+        display: block;
+        transition: transform 200ms linear;
+        flex: none;
+        margin-left: 10px;
+      }
+    }
+
+    &-text {
+      max-height: 0;
+      overflow: hidden;
+      transition: opacity 0.3s ease, max-height 0.3s ease;
+      font-size: 16px;
+      line-height: 20px;
+      color: rgba(255,255,255, 0.8);
+      margin: 0;
+      opacity: 0;
+
+      @media (max-width: 520px) {
+        padding-right: 0;
+      }
+    }
+
+    &-block {
+      padding: 16px 25px;
+    }
+
+    &-checkbox {
+      display: none;
+
+      &:checked + #{$block}__accordion-block {
+        margin-bottom: 18px;
+        background: rgba(53, 58, 77, 0.5);
+        border-radius: 9px;
+
+        #{$block}__accordion-label {
+          color: $white;
+
+          svg {
+            transform: rotate(180deg);
+          }
+        }
+
+        #{$block}__accordion-text {
+          opacity: 1;
+          max-height: 100%;
+          margin-top: 28px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,116 @@
+@import "functions";
+@import 'mixins';
+@import "variables";
+
+@import "../node_modules/bootstrap/scss/bootstrap-grid";
+
+@import "helpers/normalize";
+@import "fonts";
+
+body {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  position: relative;
+  background: linear-gradient(0deg, #1C1F2D, #1C1F2D), #F2F4F9;
+}
+body.no-scroll {
+  height: 100%;
+  overflow: hidden;
+}
+.registration-container {
+  max-width: 570px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  background-color: transparent;
+  border-radius: 11px;
+  margin: auto;
+
+  @media screen and (max-width: 767.98px) {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  @media screen and (min-width: 576px) and (max-width: 767.98px) {
+    .-group .select__active {
+      width: 380px;
+    }
+  }
+}
+
+@import "helpers/links";
+@import "helpers/padding";
+@import "helpers/bg";
+@import "helpers/border";
+@import "helpers/hr";
+
+@import "components/container";
+@import "components/footer";
+@import "components/header";
+
+@import "components/media";
+@import "components/scrolling-wrapper";
+@import "components/icon";
+@import "components/text";
+@import "components/button";
+@import "components/tabs";
+
+@import "components/chart";
+@import "components/chart-line";
+@import "components/dropdown";
+@import "components/gamburger";
+@import "components/quotex-logo";
+@import "components/payment-system";
+@import "components/data-tables";
+
+@import "components/countries-trigger";
+@import "components/cookie-bar";
+@import "components/tooltip";
+@import "components/alert";
+@import "components/hint";
+
+@import "components/breadcrumbs";
+@import "components/page-content";
+@import "components/posts";
+
+@import "components/to-top";
+@import "components/modal";
+@import "components/forms";
+@import "components/other-tabs";
+@import "components/select";
+@import "components/contact";
+@import "components/upload-control";
+
+@import "about-us/styles";
+@import "questions/styles";
+@import "sign/styles";
+@import "main/styles";
+@import "contacts/styles";
+@import "error-page/styles";
+
+@import "components/modal-sign";
+@import "components/modal-account-closed.scss";
+
+@import "modal/styles";
+@import "modal/modalaccountclosed";
+
+// media
+
+// @media screen and (max-width: 575.98px) -   down xs
+
+// @media screen and (min-width: 576px) -      up sm
+// @media screen and (max-width: 767.98px) -   down sm
+
+// @media screen and (min-width: 768px) -      up md
+// @media screen and (max-width: 991.98px) -   down md
+
+// @media screen and (min-width: 992px) -      up lg
+// @media screen and (max-width: 1199.98px) -  down lg
+
+// @media screen and (min-width: 1200px) -     up lg
+// @media screen and (max-width: 1199.98px) -  downlg
+
+// @media screen and (min-width: 1200px) -     up xl
+// @media screen and (max-width: 1489.98px) -  down xl
+
+// @media screen and (min-width: 1490px) -     up xxl

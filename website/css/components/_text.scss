@@ -1,0 +1,180 @@
+h1,
+.h1 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 64px;
+  color: $white;
+
+  @media (max-width: $media-breakpoint-sm-max) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+h2,
+.h2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 48px;
+  color: $white;
+
+  @media (max-width: $media-breakpoint-sm-max) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+h3,
+.h3 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: $white;
+
+  @media (max-width: $media-breakpoint-sm-max) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+
+h4,
+.h4 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  /* identical to box height */
+
+  letter-spacing: 0.01em;
+
+  /* Text color 1 */
+
+  color: $text-1;
+}
+h5,
+.h5 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  /* or 162% */
+
+  letter-spacing: 0.01em;
+
+  color: $text-3;
+}
+h6,
+.h6 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  /* or 157% */
+
+  letter-spacing: 0.01em;
+
+  color: $text-3;
+}
+.text-white {
+  color: $white !important;
+}
+.text-center {
+  text-align: center !important;
+}
+.text-left {
+  text-align: left !important;
+}
+.text-right {
+  text-align: right !important;
+}
+.text-justify {
+  text-align: justify !important;
+}
+
+ul.list,
+.list {
+  @media screen and (max-width: 575.98px) {
+    padding-left: 15px;
+  }
+  li {
+    position: relative;
+    color: #35B972;
+
+    margin-bottom: 30px;
+
+    span {
+      color: rgba(16, 16, 16, 0.95);
+    }
+
+    @media screen and (max-width: 575.98px) {
+      margin-bottom: 10px;
+      p {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  &__title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    /* or 137% */
+
+    letter-spacing: 0.01em;
+
+    color: #434a5c;
+  }
+  p {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    margin: 10px 0 0 0;
+    letter-spacing: 0.01em;
+    color: #5f636f;
+  }
+}
+
+p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0;
+  color: $white-70;
+
+  @media (max-width: $media-breakpoint-md-max) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+ul {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 40px;
+}
+
+.ttu {
+  text-transform: uppercase;
+}

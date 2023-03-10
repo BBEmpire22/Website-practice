@@ -1,0 +1,123 @@
+$block: '.contacts';
+
+#{$block} {
+  max-width: 1225px;
+  width: 100%;
+  margin: 55px auto 180px;
+
+  @media (max-width: 992px) {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  @media (max-width: 524px) {
+    margin: 16px auto 40px;
+  }
+
+  &__title {
+    margin-bottom: 56px;
+    font-weight: bold;
+  }
+
+  &__description {
+    max-width: 913px;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 61px;
+  }
+
+  &__input {
+    position: relative;
+    color: $white;
+    max-width: 299px;
+    width: 100%;
+    margin-right: 16px;
+
+    @media (max-width: 680px) {
+      margin-right: 0;
+      margin-bottom: 32px;
+      max-width: 100%;
+    }
+
+    &-block {
+      display: flex;
+      align-items: center;
+    }
+
+    &-label {
+      position: absolute;
+      top: -8px;
+      left: 10px;
+      background: #1c1f2d;
+      color: rgba(255, 255, 255, 0.3);
+      padding: 0 6px;
+      font-size: 14px;
+      line-height: 18px;
+      z-index: 10;
+    }
+  }
+
+  &__textarea {
+    position: relative;
+    color: $white;
+    max-width: 617px;
+    width: 100%;
+    margin-top: 32px;
+    margin-bottom: 24px;
+
+    @media (max-width: 680px) {
+      margin-top: 0;
+    }
+
+    &-label {
+      position: absolute;
+      top: -8px;
+      left: 10px;
+      background: #1c1f2d;
+      color: rgba(255, 255, 255, 0.3);
+      padding: 0 6px;
+      font-size: 14px;
+      line-height: 18px;
+      z-index: 10;
+    }
+
+    textarea {
+      resize: none;
+      min-height: 140px;
+      width: 100%;
+      padding: 20px;
+    }
+  }
+
+  &__subtitle {
+    margin: 69px 0 57px;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  &__address {
+    display: flex;
+    align-items: center;
+    color: rgba(255,255,255, 0.8);
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 24px;
+
+    &-icon {
+      width: 8px;
+      height: 8px;
+      border-radius: 100%;
+      background: #2A99FF;
+      margin-right: 16px;
+    }
+
+    &-name {
+      margin-left: 24px;
+      color: rgba(255,255,255, 0.8);
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+}

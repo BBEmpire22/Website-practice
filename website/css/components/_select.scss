@@ -1,0 +1,151 @@
+.select {
+  position: relative;
+}
+
+.select__element {
+  display: none;
+}
+
+.select__wrapper {
+  display: block;
+  position: relative;
+
+  &--contact{
+    width: 100%;
+    height: 50px;
+    color: #7e859d;
+    background: #f6f4f9;
+    padding: 10px;
+    border-radius: 5px;
+  }
+}
+.select__result {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  color: #7E859D;
+
+  .icon {
+    width: 16px !important;
+    height: 12px !important;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.select__wrapper .select__icon {
+  transition: 0.3s;
+  pointer-events: none;
+
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  vertical-align: middle;
+  position: relative;
+
+  background-image: url("../img/icons/arrow-dark-down.svg");
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.display-none {
+  display: none !important;
+}
+
+.-group {
+  .select__options {
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 15px;
+    grid-column-gap: 30px;
+    @media screen and (max-width: 575.98px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .select__result {
+    .select__text {
+      display: none;
+    }
+  }
+  
+}
+.select__options {
+  top: calc(100% + 2px);
+  left: 0;
+  width: 100%;
+  height: 0;
+
+  display: grid;
+
+  grid-template-columns: 1fr;
+  grid-row-gap: 30px;
+
+  overflow: hidden;
+  position: absolute;
+  background: #f6f4f9;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  color: #7E859D;
+
+  border-radius: 7px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  div {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .icon {
+    margin-right: 10px;
+  }
+
+  div:first-child {
+    display: none;
+  }
+
+  &:disabled {
+    display: none;
+  }
+}
+
+.-group {
+  .select__active {
+    width: 410px;
+    @media screen and (max-width: 575.98px) {
+      width: calc(100vw - 30px);
+    }
+  }
+}
+.select__active {
+  height: auto;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 9;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  .select__result::after {
+    transform: rotate(0deg);
+  }
+}

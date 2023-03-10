@@ -1,0 +1,13 @@
+.quotex-logo {
+  display: block;
+  height: 30px;
+  width: 150px;
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: contain;
+  background-image: url("../img/quotex_logo.svg");
+  @media (max-width: 765px) {
+    background-image: url("../img/quotex_logo-white-mobile.svg");
+    width: 40px;
+  }
+}

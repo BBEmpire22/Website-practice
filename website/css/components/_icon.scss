@@ -1,0 +1,143 @@
+@mixin icon($name, $path, $width, $height) {
+  &__#{$name} {
+    width: $width + px;
+    height: $height + px;
+    background-image: url("../img/"+$path);
+  }
+}
+.icon {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  vertical-align: middle;
+  position: relative;
+
+  &-row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // @include icon("analytics", "icons/analytics.svg", 14, 14);
+  @include icon("arrow-right-white", "icons/arrow-right-white.svg", 14, 8);
+  @include icon("arrow-contact", "icons/arrow-contact.svg", 18, 18);
+
+  @include icon("online-learning", "icons/online-learning.svg", 24, 25);
+  @include icon("mind", "icons/mind.svg", 24, 25);
+  @include icon("bubble-speak", "icons/bubble-speak.svg", 24, 25);
+
+  @include icon("visa", "icons/visa.svg", 96, 30);
+  @include icon("mastercard", "icons/mastercard.svg", 72, 58);
+  @include icon("skrill", "icons/skrill.svg", 92, 32);
+  @include icon("neteller", "icons/neteller.svg", 117, 22);
+  @include icon("yandex", "icons/yandex.svg", 128, 58);
+  @include icon("webmoney", "icons/webmoney.svg", 125, 30);
+  @include icon("qiwi", "icons/qiwi.svg", 131, 60);
+
+  @include icon("rupay", "icons/rupay.svg", 126, 58);
+  @include icon("airtel", "icons/airtel.svg", 138, 58);
+  @include icon("olamoney", "icons/olamoney.svg", 44, 44);
+  @include icon("upi", "icons/upi.svg", 84, 58);
+  @include icon("mobikwik", "icons/mobikwik.svg", 44, 44);
+  @include icon("paytm", "icons/paytm.svg", 126, 58);
+  @include icon("bank_indian", "icons/bank_indian.svg", 143, 58);
+
+  @include icon("bni", "icons/bni.svg", 126, 58);
+  @include icon("doku", "icons/doku.svg", 58, 58);
+  @include icon("mandiri", "icons/mandiri.svg", 124, 58);
+  @include icon("danamon", "icons/danamon.svg", 151, 58);
+  @include icon("bank_indonesian", "icons/bank_indonesian.svg", 157, 58);
+
+  @include icon("pix", "icons/pix.svg", 142, 58);
+  @include icon("paylivre", "icons/paylivre.svg", 211, 58);
+  @include icon("itau", "icons/itau.svg", 58, 58);
+  @include icon("advcash", "icons/advcash.svg", 157, 58);
+
+  @include icon("maybank", "icons/maybank.svg", 208, 58);
+  @include icon("rhb_bank", "icons/rhb_bank.svg", 100, 58);
+  @include icon("cimb", "icons/cimb.svg", 138, 58);
+  @include icon("hong_leon", "icons/hong_leon.svg", 218, 58);
+  @include icon("public_bank", "icons/public_bank.svg", 132, 58);
+  @include icon("bank_malasia", "icons/bank_malasia.svg", 148, 58);
+
+  @include icon("promptpay", "icons/promptpay.svg", 130, 58);
+  @include icon("perfect_money", "icons/perfect_money.svg", 239, 58);
+  @include icon("bank_thailand", "icons/bank_thailand.svg", 151, 58);
+
+  @include icon("grabpay", "icons/grabpay.svg", 58, 58);
+  @include icon("gcash", "icons/gcash.svg", 197, 58);
+  @include icon("paymaya", "icons/paymaya.svg", 226, 58);
+  @include icon("coins_ph", "icons/coins_ph.svg", 190, 58);
+
+  @include icon("momo", "icons/momo.svg", 58, 58);
+  @include icon("bank_vietnam", "icons/bank_vietnam.svg", 151, 58);
+
+  @include icon("yomoney", "icons/yomoney.svg", 147, 58);
+  @include icon("fkwallet", "icons/fkwallet.svg", 58, 58);
+  @include icon("piastrix", "icons/piastrix.svg", 126, 58);
+
+  @include icon("analytics", "icons/analytics.svg", 24, 24);
+  @include icon("diagram", "icons/diagram.svg", 24, 24);
+  @include icon("graph", "icons/graph.svg", 24, 24);
+  @include icon("award", "icons/award.svg", 24, 24);
+  @include icon("rocket", "icons/rocket.svg", 24, 24);
+  @include icon("businessman", "icons/businessman.svg", 24, 24);
+
+  // social
+  @include icon("youtube", "icons/youtube.svg", 16, 16);
+  @include icon("facebook", "icons/facebook.svg", 16, 16);
+  @include icon("instagram", "icons/instagram.svg", 16, 16);
+  @include icon("twitter", "icons/twitter.svg", 16, 16);
+
+  @include icon("youtube-white", "icons/youtube-white.svg", 16, 16);
+  @include icon("facebook-white", "icons/facebook-white.svg", 16, 16);
+  @include icon("instagram-white", "icons/instagram-white.svg", 16, 16);
+  @include icon("twitter-white", "icons/twitter-white.svg", 16, 16);
+
+  @include icon("arrow-dark-down", "icons/arrow-dark-down.svg", 9, 9);
+  @include icon("arrow-white-down", "icons/arrow-white-down.svg", 10, 10);
+  // countries
+  @include icon("english", "countries/english.svg", 16, 16);
+  @include icon("russia", "countries/russia.svg", 16, 16);
+  @include icon("portugal", "countries/portugal.svg", 16, 16);
+  @include icon("spain", "countries/spain.svg", 16, 16);
+  @include icon("italian", "countries/italian.svg", 16, 16);
+  @include icon("poland", "countries/poland.svg", 16, 16);
+  @include icon("france", "countries/france.svg", 16, 16);
+  @include icon("deutsch", "countries/deutsch.svg", 16, 16);
+  @include icon("indonesian", "countries/indonesian.svg", 16, 16);
+  @include icon("ukraine", "countries/ukraine.svg", 16, 16);
+  @include icon("china", "countries/china.svg", 16, 16);
+  @include icon("turkey", "countries/turkey.svg", 16, 16);
+  @include icon("indonesian", "countries/indonesian.svg", 16, 16);
+  @include icon("india", "countries/india.svg", 16, 16);
+  @include icon("iran", "countries/iran.svg", 16, 16);
+  @include icon("thailand", "countries/thailand.svg", 16, 16);
+  @include icon("saudi", "countries/saudi.svg", 16, 16);
+  @include icon("vietnam", "countries/vietnam.svg", 16, 16);
+  @include icon("malay", "countries/malay.svg", 16, 16);
+  @include icon("philippines", "countries/philippines.svg", 16, 16);
+  @include icon("brazil", "countries/brazil.svg", 16, 16);
+  @include icon("japan", "countries/japan.svg", 16, 16);
+
+  @include icon("article", "icons/article.svg", 16, 16);
+  @include icon("video", "icons/video.svg", 16, 16);
+
+  // colors icon
+  @include icon("facebook-color", "icons/facebook-color.svg", 32, 32);
+  @include icon("google-color", "icons/google-color.svg", 32, 32);
+  @include icon("vk-color", "icons/vk-color.svg", 32, 32);
+
+  @include icon("facebook-login", "icons/facebook-login.svg", 24, 24);
+  @include icon("google", "icons/google.svg", 24, 24);
+  @include icon("vk", "icons/vk.svg", 24, 24);
+
+  @include icon("error", "icons/error.svg", 48, 48);
+
+  @include icon("tw-blue", "icons/tw-blue.svg", 20, 20);
+  @include icon("tg-blue", "icons/tg-blue.svg", 20, 20);
+  @include icon("inst-blue", "icons/inst-blue.svg", 20, 20);
+  @include icon("fb-blue", "icons/fb-blue.svg", 20, 20);
+}

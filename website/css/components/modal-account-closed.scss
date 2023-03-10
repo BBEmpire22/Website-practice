@@ -1,0 +1,107 @@
+$block: '.modal-account-closed';
+
+#{$block} {
+  max-width: 672px !important;
+  width: 100%;
+  background-color: #353A4D !important;
+  box-shadow: 20px 0 80px rgba(27, 31, 45, 0.2) !important;
+  border-radius: 8px !important;
+  padding: 30px !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: calc(100% - 20px);
+  overflow: auto;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed $color-white-20;
+    margin-bottom: 20px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      margin-right: 12px;
+      flex: none;
+    }
+  }
+
+  &__body {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: $color-white;
+
+    &-plus {
+      display: block;
+    }
+
+    &-minus {
+      display: none;
+    }
+
+    &-accordion {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #2B99FF;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 18px;
+
+      &.active {
+        #{$block}__body-plus {
+          display: none;
+        }
+        #{$block}__body-minus {
+          display: block;
+        }
+      }
+
+      svg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    &-block {
+      padding: 10px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    &-panel {
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 10px 0 20px;
+      transition: all 0.2s ease-out;
+
+      &.active {
+        max-height: 100vh;
+      }
+
+      ul {
+        margin: 10px 0 0;
+        padding: 0;
+      }
+
+      li {
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  &__prompt {
+    color: #E29500;
+  }
+}

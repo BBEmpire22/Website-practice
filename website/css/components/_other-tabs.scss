@@ -1,0 +1,14 @@
+.tabs {
+  &__wrapper {
+  }
+  &__links {
+  }
+  &__link {
+  }
+  &__item {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+}

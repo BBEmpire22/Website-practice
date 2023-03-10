@@ -1,0 +1,234 @@
+.chart {
+  &__scene {
+    min-height: 130px;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    padding-top: 5px;
+    padding-right: 160px;
+    padding-left: 160px;
+
+    @media screen and (max-width: 1489.98px) {
+      padding-right: 80px;
+      padding-left: 80px;
+    }
+    @media screen and (max-width: 991.98px) {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+    @media screen and (max-width: 767.98px) {
+      flex-wrap: wrap;
+      padding-top: 20px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    &#sceneOne {
+      display: none;
+      &.is-active {
+        display: block;
+      }
+    }
+
+    &#sceneTwo,
+    &#sceneThree,
+    &#sceneFour,
+    &#sceneFive {
+      display: none;
+      &.is-active {
+        display: flex;
+      }
+    }
+
+    // &.-one {
+    // }
+    // &.-two {
+    //   display: none;
+    // }
+    // &.-three {
+    //   display: none;
+    // }
+    // &.-four {
+    //   display: none;
+    // }
+    // &.-five {
+    //   display: none;
+    // }
+    &--w8 {
+      width: 100%;
+      text-align: center;
+
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 23px;
+      letter-spacing: 0.015em;
+
+      color: #ffffff;
+    }
+    &--income {
+      display: flex;
+      align-self: center;
+      justify-content: center;
+
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 23px;
+      letter-spacing: 0.015em;
+
+      color: #ffffff;
+
+      margin-right: 90px;
+
+      span {
+        display: flex;
+        align-self: center;
+        justify-content: center;
+      }
+
+      @media screen and (max-width: 1489.98px) {
+        margin-right: 30px;
+      }
+      @media screen and (max-width: 767.98px) {
+        max-width: 50%;
+        order: 2;
+        margin-top: 15px;
+      }
+      @media screen and (max-width: 575.98px) {
+        min-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+    &--info {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 23px;
+      letter-spacing: 0.015em;
+
+      color: #ffffff;
+
+      margin-right: 10px;
+
+      text-align: right;
+
+      @media screen and (max-width: 767.98px) {
+        max-width: 100%;
+        width: 100%;
+        min-width: 100%;
+        order: 1;
+        text-align: center;
+      }
+    }
+    &--action {
+      display: flex;
+      justify-content: flex-end;
+      min-width: 240px;
+      @media screen and (max-width: 767.98px) {
+        max-width: 50%;
+        width: 50%;
+        min-width: 50%;
+        order: 3;
+        margin-top: 15px;
+      }
+      @media screen and (max-width: 575.98px) {
+        min-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+    &--value {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 44px;
+      line-height: 38px;
+      /* identical to box height, or 86% */
+
+      letter-spacing: 0.01em;
+
+      /* Orange */
+
+      color: #f9aa64;
+    }
+    &--text-right {
+      text-align: right;
+      margin-right: 30px;
+    }
+  }
+}
+.chart__inner {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  & > svg {
+    max-width: 100%;
+    height: auto;
+  }
+}
+#svgChart.down #chartBgFill {
+  fill: #0048b4;
+}
+
+#chartVerticalLine {
+  opacity: 0;
+}
+
+#svgChart.up #chartVerticalLine,
+#svgChart.down #chartVerticalLine {
+  opacity: 1;
+}
+
+#chartCurveLine.animate {
+  stroke-dasharray: 467;
+  stroke-dashoffset: 0;
+  animation: dash 5s linear alternate;
+}
+
+.chartArrows {
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+#svgChart.up .chartArrows,
+#svgChart.down .chartArrows {
+  animation: none;
+  opacity: 0;
+}
+
+.chartCurveLine,
+.chartVerticalLine,
+.chartCircleInner,
+.chartCircleOuter {
+  transition: all ease-in-out 0.15s;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 467;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}

@@ -1,0 +1,25 @@
+.alert {
+    margin: 0 0 20px;
+    padding-left: 24px;
+    position: relative;
+
+    color: #E26E61;
+
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+
+        background-image: url(../img/icons/alert.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}

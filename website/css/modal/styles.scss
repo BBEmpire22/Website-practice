@@ -1,0 +1,304 @@
+$block: '.modal';
+
+#{$block} {
+    & {
+        position: fixed;
+        z-index: 15;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        top: 0;
+
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        background-color: var(--modal-bg-fon);
+
+        @if $enable-backdrop-blur {
+            @media (prefers-reduced-motion: no-preference) {
+                backdrop-filter: blur(4px);
+            }
+        }
+
+        opacity: 0;
+        pointer-events: none;
+
+        transition: opacity $sidebar-transition-close-time $sidebar-transition-close-func;
+
+        &.active {
+            opacity: 1;
+            pointer-events: all;
+
+            transition: opacity $sidebar-transition-open-time $sidebar-transition-open-func;
+        }
+
+        &--message {}
+    }
+
+    &__width {
+        width: 350px;
+        margin: 30px auto 0;
+        position: relative;
+    }
+
+    &__container {
+        position: relative;
+        width: 350px;
+        top: 0;
+        margin: 0 auto 30px;
+
+        #{$block}.active & {
+            top: 10%;
+        }
+
+        #{$block}--message & {
+            width: 300px;
+            text-align: center;
+        }
+
+        @media (max-width: $media-breakpoint-md-max) {
+            #{$block}:not(#{$block}--message) & {
+                margin: auto;
+            }
+        }
+
+        @media (max-width: $media-breakpoint-sm-max) {
+            #{$block}:not(#{$block}--message) & {
+                width: 280px;
+            }
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__dialog {
+        padding: 30px;
+        max-width: 100%;
+
+        color: $color-white;
+
+        background-color: var(--modal-bg-color);
+        box-shadow: 20px 0 80px $block-shadow-color;
+        border-radius: 8px;
+
+        transition: top $sidebar-transition-close-time $sidebar-transition-close-func;
+
+        @media (max-width: $media-breakpoint-sm-max) {
+            padding: 10px;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        padding: 3px;
+        height: 18px;
+        width: 18px;
+        right: 20px;
+        top: 20px;
+
+        background: none;
+        border: none;
+
+        color: $color-white;
+
+        cursor: pointer;
+        opacity: 0.3;
+
+        transition: opacity $menu-button-transition-time;
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        svg {
+            float: left;
+            width: 12px;
+            height: 12px;
+        }
+
+        #{$block}:not(#{$block}--message) & {
+            @media (max-width: $media-breakpoint-sm-max) {
+                right: 15px;
+                top: 15px;
+            }
+        }
+    }
+
+    &__header {
+        margin-bottom: 20px;
+
+        @include heading-2();
+
+        svg,
+        .icon {
+            display: inline-block;
+            height: 24px;
+            max-width: 24px;
+            margin-right: 5px;
+
+            vertical-align: text-bottom;
+        }
+
+        #{$block}:not(#{$block}--message) & {
+            @media (max-width: $media-breakpoint-sm-max) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    &__body {
+        &-row {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+
+        &-footer {
+            display: flex;
+            margin: 30px -24px -24px;
+
+            >* {
+                flex: 1;
+
+                & + * {
+                    margin-left: 6px;
+                }
+            }
+        }
+
+        dl {
+            display: flex;
+            flex-flow: row wrap;
+            margin: 0;
+
+            color: $color-white;
+
+            @include font-small();
+
+            dt,
+            dd {
+                flex-basis: 50%;
+                margin: 10px 0 0;
+
+                &:first-of-type {
+                    margin-top: 0;
+                }
+            }
+
+            dt {
+                color: $color-white-50;
+            }
+
+            dd {
+                &:after {
+                    content: '';
+                    flex-basis: 100%;
+                }
+            }
+        }
+
+        hr {
+            border-top: 1px solid $color-white-10;
+        }
+
+        p {
+            margin: 0;
+
+            @include font-small();
+        }
+
+        .flags {
+            margin-right: 6px;
+            vertical-align: -2px;
+
+            color: $color-black;
+
+            > * {
+                width: 12px;
+                height: 12px;
+            }
+        }
+
+        @media (max-width: $media-breakpoint-sm-max) {
+            &-footer {
+                margin: 10px 0 0;
+                flex-direction: column;
+
+                >* {
+                    flex: 1;
+
+                    & + * {
+                        margin-left: 0;
+                        margin-top: 6px;
+                    }
+                }
+            }
+
+            #{$block}:not(#{$block}--message) & {
+                padding: 10px;
+
+                background-color: $color-white-10;
+                box-shadow: 2px 2px 6px rgba($color-black, 0.03);
+                border-radius: 4px;
+
+                hr {
+                    margin-top: $app-gutter-width / 2;
+                    margin-bottom: $app-gutter-width / 2;
+                }
+
+                .flags {
+                    color: $color-charcoal;
+                }
+            }
+
+            #{$block}--message & {
+                &-footer {
+                    margin: 30px 0 0;
+                }
+            }
+        }
+    }
+
+    &__message {
+        margin: 0;
+
+        @include font-small();
+    }
+
+    &__footer {
+        display: flex;
+        margin: 30px -24px -24px;
+
+        &--inline {
+            margin: 30px 0 0;
+        }
+
+        >* {
+            flex: 1;
+
+            & + * {
+                margin-left: 6px;
+            }
+        }
+    }
+
+    &__verification {
+        position: relative;
+        max-width: 458px;
+        margin: 5% auto 0;
+
+        .upload-control {
+            background: rgba(2, 111, 211, 0.1);
+            border: 1px dashed #026FD3;
+        }
+    }
+
+    &__qrcode {
+        width: 400px;
+        margin: 50px auto 0;
+        position: relative;
+    }
+}

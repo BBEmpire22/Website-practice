@@ -1,0 +1,33 @@
+.dropdown {
+  position: relative;
+  &__trigger {
+    position: relative;
+    display: inline-flex;
+    &:hover {
+      & > .dropdown__menu {
+        display: block;
+      }
+      & + .dropdown__menu {
+        display: block;
+      }
+    }
+  }
+  &__menu {
+    display: none;
+    left: 0;
+    min-width: 12rem;
+    padding: 20px;
+    position: absolute;
+    top: 100%;
+    z-index: 20;
+    margin: 0;
+    list-style-type: none;
+    padding-left: 0;
+    background: #ffffff;
+    box-shadow: 0px 8px 16px rgba(177, 183, 211, 0.25);
+    border-radius: 7px;
+    width: max-content;
+  }
+  
+}
+
